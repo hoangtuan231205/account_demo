@@ -1,0 +1,242 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto;
+    color: #f5f5f5;
+}
+
+/* =====================
+   BACKGROUND
+===================== */
+.bg {
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    padding: 24px;
+    background:
+        radial-gradient(900px 450px at 15% 20%, rgba(196, 22, 28, .25), transparent 60%),
+        radial-gradient(900px 450px at 85% 70%, rgba(196, 22, 28, .15), transparent 60%),
+        linear-gradient(180deg, #111, #141414);
+}
+
+/* =====================
+   CARD
+===================== */
+.card {
+    width: min(980px, 100%);
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    border-radius: 22px;
+    overflow: hidden;
+    box-shadow: 0 30px 70px rgba(0, 0, 0, .6);
+    border: 1px solid rgba(255, 255, 255, .08);
+    background: rgba(20, 20, 20, .95);
+    backdrop-filter: blur(14px);
+}
+
+/* =====================
+   LEFT / RIGHT
+===================== */
+.left {
+    padding: 32px;
+    background: linear-gradient(180deg,
+            rgba(196, 22, 28, .15),
+            rgba(0, 0, 0, .35));
+}
+
+.right {
+    padding: 32px;
+    background: rgba(255, 255, 255, .03);
+    display: grid;
+    align-content: center;
+}
+
+/* =====================
+   BRAND
+===================== */
+.brand {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    margin-bottom: 18px;
+}
+
+/* 🔧 FIX LOGO Ở ĐÂY */
+.logo {
+    width: 44px;
+    height: 44px;
+    border-radius: 10px;
+    display: grid;
+    place-items: center;
+    background: transparent;
+    /* ❌ bỏ nền đỏ để không nuốt logo */
+}
+
+/* LOGO IMAGE */
+.logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* =====================
+   BRAND TEXT
+===================== */
+.name {
+    color: #c4161c;
+    font-weight: 800;
+    letter-spacing: .3px;
+}
+
+.tag {
+    color: #bdbdbd;
+    font-size: 13px;
+    margin-top: 2px;
+}
+
+/* =====================
+   TEXT
+===================== */
+.headline {
+    margin: 12px 0 8px;
+    color: #f5f5f5;
+    font-size: 34px;
+    line-height: 1.1;
+}
+
+.sub {
+    margin: 0 0 18px;
+    color: #bdbdbd;
+    max-width: 42ch;
+}
+
+/* =====================
+   ALERT
+===================== */
+.alert {
+    margin: 14px 0 10px;
+    padding: 12px;
+    border-radius: 12px;
+    background: rgba(196, 22, 28, .15);
+    border: 1px solid rgba(196, 22, 28, .45);
+    color: #ffb3b3;
+}
+
+/* =====================
+   SWITCH
+===================== */
+.switch {
+    margin-top: 18px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    color: #bdbdbd;
+}
+
+.link {
+    color: #c4161c;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.link:hover {
+    text-decoration: underline;
+}
+
+.dot {
+    opacity: .6;
+}
+
+/* =====================
+   FORM
+===================== */
+.form {
+    display: grid;
+    gap: 10px;
+}
+
+label {
+    font-size: 13px;
+    font-weight: 700;
+    color: #f5f5f5;
+}
+
+/* =====================
+   INPUT
+===================== */
+input {
+    width: 100%;
+    padding: 12px 14px;
+    border-radius: 14px;
+    border: 1px solid #3a3a3a;
+    background: #111;
+    color: #fff;
+    outline: none;
+}
+
+input::placeholder {
+    color: #8a8a8a;
+}
+
+input:focus {
+    border-color: #c4161c;
+    box-shadow: 0 0 0 3px rgba(196, 22, 28, .25);
+}
+
+/* =====================
+   BUTTON – WINMART
+===================== */
+.btn {
+    margin-top: 6px;
+    padding: 12px 14px;
+    border-radius: 14px;
+    border: 0;
+    cursor: pointer;
+    font-weight: 900;
+    color: #fff;
+    background: #c4161c;
+    transition: background .15s ease, transform .08s ease;
+}
+
+.btn:hover {
+    background: #a91318;
+}
+
+.btn:active {
+    transform: translateY(1px);
+}
+
+/* =====================
+   HINT
+===================== */
+.hint {
+    margin-top: 10px;
+    color: #bdbdbd;
+    font-size: 14px;
+}
+
+.hint a {
+    color: #c4161c;
+    font-weight: 800;
+    text-decoration: none;
+}
+
+.hint a:hover {
+    text-decoration: underline;
+}
+
+/* =====================
+   RESPONSIVE
+===================== */
+@media (max-width: 860px) {
+    .card {
+        grid-template-columns: 1fr;
+    }
+
+    .right {
+        border-top: 1px solid rgba(255, 255, 255, .08);
+    }
+}
