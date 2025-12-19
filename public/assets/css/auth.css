@@ -16,10 +16,48 @@ body {
     display: grid;
     place-items: center;
     padding: 24px;
+    position: relative;
+    overflow: hidden;
+
+    /* NỀN ĐỎ WINMART */
+    background: linear-gradient(180deg, #f0181e, #e01218);
+}
+
+.bg::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+
     background:
-        radial-gradient(900px 450px at 15% 20%, rgba(196, 22, 28, .25), transparent 60%),
-        radial-gradient(900px 450px at 85% 70%, rgba(196, 22, 28, .15), transparent 60%),
-        linear-gradient(180deg, #111, #141414);
+        radial-gradient(circle at 10% 15%, rgba(255, 255, 255, 0.18) 0 80px, transparent 90px),
+        radial-gradient(circle at 90% 10%, rgba(255, 255, 255, 0.15) 0 120px, transparent 130px),
+        radial-gradient(circle at 85% 55%, rgba(255, 255, 255, 0.12) 0 60px, transparent 70px),
+        radial-gradient(circle at 50% 80%, rgba(255, 255, 255, 0.14) 0 90px, transparent 100px),
+        radial-gradient(circle at 15% 85%, rgba(255, 255, 255, 0.10) 0 140px, transparent 150px);
+
+    animation: floatBubbles 18s ease-in-out infinite alternate;
+}
+
+/* ANIMATION NHẸ */
+@keyframes floatBubbles {
+    from {
+        transform: translate(0, 0);
+    }
+
+    to {
+        transform: translate(20px, -20px);
+    }
+}
+
+@keyframes floatBg {
+    from {
+        background-position: 0% 0%;
+    }
+
+    to {
+        background-position: 5% 5%;
+    }
 }
 
 /* =====================
@@ -35,6 +73,8 @@ body {
     border: 1px solid rgba(255, 255, 255, .08);
     background: rgba(20, 20, 20, .95);
     backdrop-filter: blur(14px);
+    position: relative;
+    z-index: 1;
 }
 
 /* =====================
